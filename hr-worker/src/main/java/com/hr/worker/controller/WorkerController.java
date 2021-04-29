@@ -1,4 +1,4 @@
-package com.hr.worker.resource;
+package com.hr.worker.controller;
 
 import java.util.List;
 

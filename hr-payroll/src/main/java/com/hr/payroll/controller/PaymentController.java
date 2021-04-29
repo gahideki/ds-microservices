@@ -1,4 +1,4 @@
-package com.hr.payroll.resource;
+package com.hr.payroll.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
