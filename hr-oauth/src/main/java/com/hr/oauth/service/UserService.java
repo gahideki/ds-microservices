@@ -18,17 +18,6 @@ public class UserService implements UserDetailsService {
     @Autowired
     private UserFeignClient userFeignClient;
 
-    public User getUserBy(String email) {
-        try {
-            User user = userFeignClient.getUserByEmail(email).getBody();
-            logger.info("User found");
-            return user;
-        } catch (RuntimeException exception) {
-            logger.error("User not found");
-            throw new UsernameNotFoundException(exception.getMessage());
-        }
-    }
-
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         try {
