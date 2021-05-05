@@ -30,8 +30,8 @@ public class WorkerController {
     @Autowired
     private WorkerService service;
 
-    @Value("${test.config}")
-    private String config;
+    // @Value("${test.config}")
+    // private String config;
 
     @GetMapping
     public ResponseEntity<List<Worker>> getWorkers() {
@@ -52,10 +52,10 @@ public class WorkerController {
         return ResponseEntity.ok(worker);
     }
 
-    @GetMapping("/configs")
-    public String getConfigs() {
-        logger.info("Config: " + config);
-        return config;
-    }
+    // @GetMapping("/configs")
+    // public String getConfigs() {
+    //    logger.info("Config: " + config);
+    //    return config;
+    // }
 
 }
