@@ -1,5 +1,7 @@
 # Criando e testando containers Docker
 
+<img src="/docs/containers_docker.png" alt="My cool logo"/>
+
 ## Criar rede docker para sistema hr
 ```
 docker network create hr-net
