@@ -10,10 +10,10 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @SpringBootApplication
 public class HrConfigServerApplication implements CommandLineRunner {
 
-	@Value("${GITHUB_USER}")
+	// @Value("${GITHUB_USER}")
 	private String user;
 
-	@Value("${GITHUB_PASS}")
+	// @Value("${GITHUB_PASS}")
 	private String pass;
 
 	public static void main(String[] args) {
