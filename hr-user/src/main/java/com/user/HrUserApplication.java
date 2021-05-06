@@ -4,10 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.security.crypto.bcrypt.BCrypt;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @SpringBootApplication
+@EnableEurekaClient
 public class HrUserApplication implements CommandLineRunner {
 
     @Autowired
@@ -23,3 +24,5 @@ public class HrUserApplication implements CommandLineRunner {
     }
 
 }
+
+
