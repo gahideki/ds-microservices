@@ -30,4 +30,15 @@ public class UserService implements UserDetailsService {
         }
     }
 
+    public User getUserBy(String email) {
+        try {
+            User user = userFeignClient.getUserByEmail(email).getBody();
+            logger.info("User found");
+            return user;
+        } catch (RuntimeException exception) {
+            logger.error("User not found");
+            throw new RuntimeException(exception.getMessage());
+        }
+    }
+
 }
